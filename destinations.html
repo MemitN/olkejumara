@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated title to match Olkeju Mara Tours branding -->
+    <title>Safari Destinations - Olkeju Mara Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Added top contact bar matching home page -->
+    <div class="top-contact-bar">
+        <div class="top-contact-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +254713525190</span>
+                <span><i class="fas fa-envelope"></i> info@olkejumaratours.com</span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced navigation with improved hamburger menu -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-paw me-2"></i>Olkeju Mara Tours
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="packagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Safari Packages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#day-trips">Day Trips</a></li>
+                            <li><a class="dropdown-item" href="index.html#multi-day">Multi-Day Safaris</a></li>
+                            <li><a class="dropdown-item" href="index.html#luxury">Luxury Packages</a></li>
+                            <li><a class="dropdown-item" href="index.html#budget">Budget Safaris</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.php">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Replaced page header with dynamic hero section matching home page -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/leo.jfif')"></div>
+            <div class="hero-slide" style="background-image: url('images/elephants.jfif')"></div>
+            <div class="hero-slide" style="background-image: url('images/culture.jfif')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Maasai Mara Safari Destinations</h1>
+            <p>Explore the diverse landscapes and wildlife areas within Kenya's premier safari destination</p>
+            <div class="hero-buttons">
+                <a href="booking.php" class="btn btn-primary">
+                    <i class="fas fa-calendar-alt me-2"></i>Plan Your Safari
+                </a>
+                <button onclick="bookWhatsApp()" class="btn btn-warning">
+                    <i class="fab fa-whatsapp me-2"></i>Chat with Expert
+                </button>
+            </div>
+        </div>
+        <div class="hero-navigation">
+            <button class="hero-nav-btn" id="prevBtn" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn" id="nextBtn" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="hero-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-4" style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <button class="btn btn-outline-warning active" data-filter="all">All Areas</button>
+                        <button class="btn btn-outline-warning" data-filter="central">Central Mara</button>
+                        <button class="btn btn-outline-warning" data-filter="northern">Northern Conservancies</button>
+                        <button class="btn btn-outline-warning" data-filter="southern">Southern Plains</button>
+                        <button class="btn btn-outline-warning" data-filter="river">Mara River</button>
+                        <button class="btn btn-outline-warning" data-filter="cultural">Cultural Sites</button>
+                        <button class="btn btn-outline-warning" data-filter="national-park">National Parks</button>
+                        <button class="btn btn-outline-warning" data-filter="coastal">Coastal Destinations</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="row g-4" id="destinations-grid">
+                <!-- Central Mara -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/cmp.jfif" alt="Central Mara" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Central Mara Plains</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">The heart of Maasai Mara with vast open plains perfect for spotting the Big Five and witnessing the Great Migration.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-paw me-1"></i>Big Five
+                                    <i class="fas fa-binoculars me-1 ms-2"></i>Game Drives
+                                    <i class="fas fa-camera me-1 ms-2"></i>Photography
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $150/day</span>
+                                <button onclick="bookDestination('Central Mara Plains', '$150')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="river">
+                    <div class="destination-card">
+                        <img src="images/mrc.jfif" alt="Mara River" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Mara River Crossing</h5>
+                                <span class="badge bg-primary">River</span>
+                            </div>
+                            <p class="card-text">Witness the dramatic river crossings during the Great Migration - one of nature's most spectacular events.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-water me-1"></i>River Crossing
+                                    <i class="fas fa-horse me-1 ms-2"></i>Migration
+                                    <i class="fas fa-dragon me-1 ms-2"></i>Crocodiles
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $200/day</span>
+                                <button onclick="bookDestination('Mara River Crossing', '$200')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Added more Kenyan destinations beyond just Maasai Mara -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="national-park">
+                    <div class="destination-card">
+                        <img src="images/amnp.jfif" alt="Amboseli National Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Amboseli National Park</h5>
+                                <span class="badge bg-success">National Park</span>
+                            </div>
+                            <p class="card-text">Famous for its large elephant herds and stunning views of Mount Kilimanjaro, Africa's highest peak.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-mountain me-1"></i>Mt. Kilimanjaro
+                                    <i class="fas fa-elephant me-1 ms-2"></i>Elephants
+                                    <i class="fas fa-camera me-1 ms-2"></i>Photography
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $250/day</span>
+                                <button onclick="bookDestination('Amboseli National Park', '$250')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="northern">
+                    <div class="destination-card">
+                        <img src="images/snr.jfif" alt="Samburu National Reserve" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Samburu National Reserve</h5>
+                                <span class="badge bg-success">Northern</span>
+                            </div>
+                            <p class="card-text">Home to unique wildlife species including Grevy's zebras, reticulated giraffes, and Somali ostriches.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-zebra me-1"></i>Grevy's Zebra
+                                    <i class="fas fa-giraffe me-1 ms-2"></i>Reticulated Giraffe
+                                    <i class="fas fa-feather me-1 ms-2"></i>Unique Species
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $280/day</span>
+                                <button onclick="bookDestination('Samburu National Reserve', '$280')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/lnk.jfif" alt="Lake Nakuru" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Lake Nakuru National Park</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Famous for millions of flamingos, rhino sanctuary, and diverse birdlife around the alkaline lake.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-dove me-1"></i>Flamingos
+                                    <i class="fas fa-rhino me-1 ms-2"></i>Rhinos
+                                    <i class="fas fa-binoculars me-1 ms-2"></i>Bird Watching
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $180/day</span>
+                                <button onclick="bookDestination('Lake Nakuru National Park', '$180')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="southern">
+                    <div class="destination-card">
+                        <img src="images/tsavo.jfif" alt="Tsavo National Parks" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Tsavo National Parks</h5>
+                                <span class="badge bg-info">Southern</span>
+                            </div>
+                            <p class="card-text">Kenya's largest national park, famous for red elephants, diverse landscapes, and the man-eating lions of Tsavo.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-elephant me-1"></i>Red Elephants
+                                    <i class="fas fa-crown me-1 ms-2"></i>Lions
+                                    <i class="fas fa-mountain me-1 ms-2"></i>Diverse Terrain
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $220/day</span>
+                                <button onclick="bookDestination('Tsavo National Parks', '$220')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="northern">
+                    <div class="destination-card">
+                        <img src="images/olk.jfif" alt="Ol Kinyei" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Ol Kinyei Conservancy</h5>
+                                <span class="badge bg-success">Conservancy</span>
+                            </div>
+                            <p class="card-text">Private conservancy offering exclusive wildlife viewing with fewer crowds and night game drives.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-moon me-1"></i>Night Drives
+                                    <i class="fas fa-users me-1 ms-2"></i>Private
+                                    <i class="fas fa-leaf me-1 ms-2"></i>Conservation
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $300/day</span>
+                                <button onclick="bookDestination('Ol Kinyei Conservancy', '$300')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/naivasha.jfif" alt="Lake Naivasha" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Lake Naivasha</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Freshwater lake perfect for boat safaris, hippo watching, and visiting Crescent Island walking safari.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-ship me-1"></i>Boat Safari
+                                    <i class="fas fa-hippo me-1 ms-2"></i>Hippos
+                                    <i class="fas fa-walking me-1 ms-2"></i>Walking Safari
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $160/day</span>
+                                <button onclick="bookDestination('Lake Naivasha', '$160')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="cultural">
+                    <div class="destination-card">
+                        <img src="images/masaivillage.jfif" alt="Maasai Village" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Authentic Maasai Village</h5>
+                                <span class="badge bg-danger">Cultural</span>
+                            </div>
+                            <p class="card-text">Experience authentic Maasai culture, traditional dances, and learn about ancient customs and way of life.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-music me-1"></i>Traditional Dance
+                                    <i class="fas fa-home me-1 ms-2"></i>Village Tour
+                                    <i class="fas fa-handshake me-1 ms-2"></i>Cultural Exchange
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $50/visit</span>
+                                <button onclick="bookDestination('Maasai Village Experience', '$50')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="northern">
+                    <div class="destination-card">
+                        <img src="images/abadare.jfif" alt="Aberdare National Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Aberdare National Park</h5>
+                                <span class="badge bg-success">Mountain</span>
+                            </div>
+                            <p class="card-text">Mountainous park with waterfalls, bamboo forests, and unique tree hotels for wildlife viewing.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-tree me-1"></i>Tree Hotels
+                                    <i class="fas fa-tint me-1 ms-2"></i>Waterfalls
+                                    <i class="fas fa-mountain me-1 ms-2"></i>Mountains
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $200/day</span>
+                                <button onclick="bookDestination('Aberdare National Park', '$200')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 destination-item" data-category="coastal">
+                    <div class="destination-card">
+                        <img src="images/diani.jfif" alt="Diani Beach" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Diani Beach</h5>
+                                <span class="badge bg-info">Coastal</span>
+                            </div>
+                            <p class="card-text">Pristine white sand beaches on the Indian Ocean, perfect for combining safari with beach relaxation.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-umbrella-beach me-1"></i>Beach
+                                    <i class="fas fa-swimmer me-1 ms-2"></i>Swimming
+                                    <i class="fas fa-cocktail me-1 ms-2"></i>Relaxation
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $120/day</span>
+                                <button onclick="bookDestination('Diani Beach', '$120')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                <!-- Mount Kenya National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="national-park">
+                    <div class="destination-card">
+                        <img src="images/mku.jfif" alt="Mount Kenya" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Mount Kenya National Park</h5>
+                                <span class="badge bg-success">National Park</span>
+                            </div>
+                            <p class="card-text">Africa's second highest peak with diverse ecosystems, from bamboo forests to alpine zones and glacial lakes.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-mountain me-1"></i>Climbing
+                                    <i class="fas fa-snowflake me-1 ms-2"></i>Alpine Zone
+                                    <i class="fas fa-hiking me-1 ms-2"></i>Trekking
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $320/day</span>
+                                <button onclick="bookDestination('Mount Kenya National Park', '$320')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hell's Gate National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/hg.jfif" alt="Hell's Gate" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Hell's Gate National Park</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Unique park where you can walk and cycle among wildlife, featuring dramatic cliffs and geothermal activity.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-bicycle me-1"></i>Cycling
+                                    <i class="fas fa-walking me-1 ms-2"></i>Walking Safari
+                                    <i class="fas fa-fire me-1 ms-2"></i>Geothermal
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $140/day</span>
+                                <button onclick="bookDestination('Hell\'s Gate National Park', '$140')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meru National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/mrnp.jfif" alt="Meru National Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Meru National Park</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Famous as the home of Elsa the lioness from "Born Free", offering pristine wilderness and diverse wildlife.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-crown me-1"></i>Born Free
+                                    <i class="fas fa-leaf me-1 ms-2"></i>Pristine
+                                    <i class="fas fa-paw me-1 ms-2"></i>Big Five
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $240/day</span>
+                                <button onclick="bookDestination('Meru National Park', '$240')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laikipia Plateau -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="northern">
+                    <div class="destination-card">
+                        <img src="images/lk.jfif" alt="Laikipia Plateau" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Laikipia Plateau</h5>
+                                <span class="badge bg-success">Northern</span>
+                            </div>
+                            <p class="card-text">Private conservancies offering exclusive wildlife experiences with innovative conservation programs.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-users me-1"></i>Private
+                                    <i class="fas fa-leaf me-1 ms-2"></i>Conservation
+                                    <i class="fas fa-star me-1 ms-2"></i>Exclusive
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $450/day</span>
+                                <button onclick="bookDestination('Laikipia Plateau', '$450')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Watamu Marine National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="coastal">
+                    <div class="destination-card">
+                        <img src="images/watamu.jfif" alt="Watamu Marine Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Watamu Marine National Park</h5>
+                                <span class="badge bg-info">Coastal</span>
+                            </div>
+                            <p class="card-text">Pristine coral reefs, sea turtle nesting sites, and world-class snorkeling and diving opportunities.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-fish me-1"></i>Snorkeling
+                                    <i class="fas fa-turtle me-1 ms-2"></i>Sea Turtles
+                                    <i class="fas fa-coral me-1 ms-2"></i>Coral Reefs
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $180/day</span>
+                                <button onclick="bookDestination('Watamu Marine National Park', '$180')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Malindi Marine National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="coastal">
+                    <div class="destination-card">
+                        <img src="images/malindi.jfif" alt="Malindi Marine Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Malindi Marine National Park</h5>
+                                <span class="badge bg-info">Coastal</span>
+                            </div>
+                            <p class="card-text">Historic coastal town with marine park featuring coral gardens, traditional dhow sailing, and Swahili culture.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-ship me-1"></i>Dhow Sailing
+                                    <i class="fas fa-mosque me-1 ms-2"></i>Swahili Culture
+                                    <i class="fas fa-coral me-1 ms-2"></i>Coral Gardens
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $160/day</span>
+                                <button onclick="bookDestination('Malindi Marine National Park', '$160')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lamu Island -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="coastal">
+                    <div class="destination-card">
+                        <img src="images/lamuisland.jfif" alt="Lamu Island" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Lamu Island</h5>
+                                <span class="badge bg-info">Coastal</span>
+                            </div>
+                            <p class="card-text">UNESCO World Heritage site with 700-year-old Swahili culture, no cars, and pristine beaches.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-landmark me-1"></i>UNESCO Site
+                                    <i class="fas fa-horse me-1 ms-2"></i>Donkey Transport
+                                    <i class="fas fa-mosque me-1 ms-2"></i>Swahili Culture
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $200/day</span>
+                                <button onclick="bookDestination('Lamu Island', '$200')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shimba Hills National Reserve -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="coastal">
+                    <div class="destination-card">
+                        <img src="images/shimba.jfif" alt="Shimba Hills" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Shimba Hills National Reserve</h5>
+                                <span class="badge bg-info">Coastal</span>
+                            </div>
+                            <p class="card-text">Coastal forest reserve famous for rare sable antelopes, elephants, and stunning ocean views.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-deer me-1"></i>Sable Antelope
+                                    <i class="fas fa-tree me-1 ms-2"></i>Coastal Forest
+                                    <i class="fas fa-binoculars me-1 ms-2"></i>Ocean Views
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $170/day</span>
+                                <button onclick="bookDestination('Shimba Hills National Reserve', '$170')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kakamega Forest -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/kakamega.jfif" alt="Kakamega Forest" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Kakamega Forest</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Kenya's only tropical rainforest, home to over 400 bird species and rare primates like De Brazza's monkey.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-tree me-1"></i>Rainforest
+                                    <i class="fas fa-dove me-1 ms-2"></i>400+ Birds
+                                    <i class="fas fa-monkey me-1 ms-2"></i>Primates
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $130/day</span>
+                                <button onclick="bookDestination('Kakamega Forest', '$130')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marsabit National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="northern">
+                    <div class="destination-card">
+                        <img src="images/marsabit.jfif" alt="Marsabit National Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Marsabit National Park</h5>
+                                <span class="badge bg-success">Northern</span>
+                            </div>
+                            <p class="card-text">Desert oasis with crater lakes, ancient forests, and large tusked elephants in a unique ecosystem.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-oasis me-1"></i>Desert Oasis
+                                    <i class="fas fa-elephant me-1 ms-2"></i>Big Tuskers
+                                    <i class="fas fa-lake me-1 ms-2"></i>Crater Lakes
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $290/day</span>
+                                <button onclick="bookDestination('Marsabit National Park', '$290')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sibiloi National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="northern">
+                    <div class="destination-card">
+                        <img src="images/sibiloi.jfif" alt="Sibiloi National Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Sibiloi National Park</h5>
+                                <span class="badge bg-success">Northern</span>
+                            </div>
+                            <p class="card-text">UNESCO site on Lake Turkana, famous for fossil discoveries and the world's largest desert lake.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-bone me-1"></i>Fossils
+                                    <i class="fas fa-lake me-1 ms-2"></i>Lake Turkana
+                                    <i class="fas fa-landmark me-1 ms-2"></i>UNESCO Site
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $350/day</span>
+                                <button onclick="bookDestination('Sibiloi National Park', '$350')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chyulu Hills National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="southern">
+                    <div class="destination-card">
+                        <img src="images/chyulu.jfif" alt="Chyulu Hills" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Chyulu Hills National Park</h5>
+                                <span class="badge bg-info">Southern</span>
+                            </div>
+                            <p class="card-text">Young volcanic hills with spectacular views of Kilimanjaro, lava tube caves, and diverse ecosystems.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-mountain me-1"></i>Kilimanjaro Views
+                                    <i class="fas fa-cave me-1 ms-2"></i>Lava Tubes
+                                    <i class="fas fa-volcano me-1 ms-2"></i>Volcanic Hills
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $210/day</span>
+                                <button onclick="bookDestination('Chyulu Hills National Park', '$210')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ruma National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/ruma.jfif" alt="Ruma National Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Ruma National Park</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Kenya's only park protecting the rare roan antelope, with rolling grasslands and diverse birdlife.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-deer me-1"></i>Roan Antelope
+                                    <i class="fas fa-grass me-1 ms-2"></i>Grasslands
+                                    <i class="fas fa-dove me-1 ms-2"></i>Bird Watching
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $150/day</span>
+                                <button onclick="bookDestination('Ruma National Park', '$150')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kisite-Mpunguti Marine National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="coastal">
+                    <div class="destination-card">
+                        <img src="images/kisite.jfif" alt="Kisite-Mpunguti" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Kisite-Mpunguti Marine Park</h5>
+                                <span class="badge bg-info">Coastal</span>
+                            </div>
+                            <p class="card-text">Marine park near Wasini Island famous for dolphin watching, pristine coral reefs, and dhow excursions.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-dolphin me-1"></i>Dolphins
+                                    <i class="fas fa-coral me-1 ms-2"></i>Coral Reefs
+                                    <i class="fas fa-ship me-1 ms-2"></i>Dhow Trips
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $190/day</span>
+                                <button onclick="bookDestination('Kisite-Mpunguti Marine Park', '$190')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arabuko Sokoke Forest -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="coastal">
+                    <div class="destination-card">
+                        <img src="images/arabuko.jfif" alt="Arabuko Sokoke" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Arabuko Sokoke Forest</h5>
+                                <span class="badge bg-info">Coastal</span>
+                            </div>
+                            <p class="card-text">Largest coastal forest in East Africa with endemic species including the Sokoke scops owl and golden-rumped elephant shrew.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-owl me-1"></i>Endemic Species
+                                    <i class="fas fa-butterfly me-1 ms-2"></i>Butterflies
+                                    <i class="fas fa-tree me-1 ms-2"></i>Coastal Forest
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $120/day</span>
+                                <button onclick="bookDestination('Arabuko Sokoke Forest', '$120')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mombasa Marine National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="coastal">
+                    <div class="destination-card">
+                        <img src="images/mombasa marine.jfif" alt="Mombasa Marine Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Mombasa Marine National Park</h5>
+                                <span class="badge bg-info">Coastal</span>
+                            </div>
+                            <p class="card-text">Easily accessible marine park with glass-bottom boat tours, snorkeling, and vibrant coral gardens.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-ship me-1"></i>Glass-bottom Boat
+                                    <i class="fas fa-fish me-1 ms-2"></i>Snorkeling
+                                    <i class="fas fa-coral me-1 ms-2"></i>Coral Gardens
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $140/day</span>
+                                <button onclick="bookDestination('Mombasa Marine National Park', '$140')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nairobi National Park -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/nairobi.jfif" alt="Nairobi National Park" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Nairobi National Park</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Unique park where you can see lions, rhinos, and giraffes with Nairobi's skyline as backdrop.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-city me-1"></i>City Views
+                                    <i class="fas fa-rhino me-1 ms-2"></i>Black Rhinos
+                                    <i class="fas fa-clock me-1 ms-2"></i>Half Day
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $100/day</span>
+                                <button onclick="bookDestination('Nairobi National Park', '$100')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ol Pejeta Conservancy -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/opc.jfif" alt="Ol Pejeta Conservancy" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Ol Pejeta Conservancy</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Home to the last northern white rhinos, largest black rhino sanctuary, and East Africa's only chimpanzee sanctuary.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-rhino me-1"></i>White Rhinos
+                                    <i class="fas fa-monkey me-1 ms-2"></i>Chimpanzees
+                                    <i class="fas fa-leaf me-1 ms-2"></i>Conservation
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $280/day</span>
+                                <button onclick="bookDestination('Ol Pejeta Conservancy', '$280')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maasai Mara Conservancies -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="northern">
+                    <div class="destination-card">
+                        <img src="images/masaconser.jfif" alt="Mara Conservancies" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Mara Conservancies</h5>
+                                <span class="badge bg-success">Conservancy</span>
+                            </div>
+                            <p class="card-text">Private conservancies surrounding Maasai Mara offering exclusive access, night drives, and walking safaris.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-moon me-1"></i>Night Drives
+                                    <i class="fas fa-walking me-1 ms-2"></i>Walking Safari
+                                    <i class="fas fa-star me-1 ms-2"></i>Exclusive
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $400/day</span>
+                                <button onclick="bookDestination('Mara Conservancies', '$400')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lake Bogoria -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/bogoria.jfif" alt="Lake Bogoria" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Lake Bogoria National Reserve</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Alkaline lake famous for millions of flamingos, hot springs, geysers, and greater kudu antelopes.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-dove me-1"></i>Flamingos
+                                    <i class="fas fa-fire me-1 ms-2"></i>Hot Springs
+                                    <i class="fas fa-water me-1 ms-2"></i>Geysers
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $170/day</span>
+                                <button onclick="bookDestination('Lake Bogoria National Reserve', '$170')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lake Baringo -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/barinko.jfif" alt="Lake Baringo" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Lake Baringo</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Freshwater lake with over 470 bird species, hippos, crocodiles, and boat safaris to Ol Kokwe Island.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-dove me-1"></i>470+ Birds
+                                    <i class="fas fa-ship me-1 ms-2"></i>Boat Safari
+                                    <i class="fas fa-hippo me-1 ms-2"></i>Hippos
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $150/day</span>
+                                <button onclick="bookDestination('Lake Baringo', '$150')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lake Elementaita -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/elementauta.jfif" alt="Lake Elementaita" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Lake Elementaita</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Soda lake in the Great Rift Valley, part of UNESCO World Heritage site, famous for flamingos and pelicans.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-dove me-1"></i>Flamingos
+                                    <i class="fas fa-feather me-1 ms-2"></i>Pelicans
+                                    <i class="fas fa-landmark me-1 ms-2"></i>UNESCO Site
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $130/day</span>
+                                <button onclick="bookDestination('Lake Elementaita', '$130')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menengai Crater -->
+                <div class="col-lg-4 col-md-6 destination-item" data-category="central">
+                    <div class="destination-card">
+                        <img src="images/menengai.jfif" alt="Menengai Crater" class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Menengai Crater</h5>
+                                <span class="badge bg-warning text-dark">Central</span>
+                            </div>
+                            <p class="card-text">Massive volcanic caldera near Nakuru with spectacular views, hiking trails, and geothermal activity.</p>
+                            <div class="destination-features mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-volcano me-1"></i>Volcanic Crater
+                                    <i class="fas fa-hiking me-1 ms-2"></i>Hiking
+                                    <i class="fas fa-binoculars me-1 ms-2"></i>Panoramic Views
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From $80/day</span>
+                                <button onclick="bookDestination('Menengai Crater', '$80')" class="btn btn-warning">
+                                    <i class="fab fa-whatsapp me-1"></i>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--warning-color), var(--safari-gold)); color: var(--dark-color);">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2 class="fw-bold mb-4">Ready to Explore Kenya?</h2>
+                    <p class="lead mb-4">Let us create a customized safari experience that combines multiple destinations for the ultimate Kenyan adventure</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="booking.php" class="btn btn-dark btn-lg">
+                            <i class="fas fa-calendar-alt me-2"></i>Plan Your Safari
+                        </a>
+                        <button onclick="bookWhatsApp()" class="btn btn-outline-dark btn-lg">
+                            <i class="fab fa-whatsapp me-2"></i>Chat with Expert
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-paw me-2"></i>Olkeju Mara Tours
+                    </h5>
+                    <p class="text-muted">Your gateway to authentic Kenyan safari experiences. Locally owned and operated with a passion for wildlife conservation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.php">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Safari Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Day Safaris</a></li>
+                        <li><a href="#">Multi-Day Packages</a></li>
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Photography Safaris</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Maasai Mara, Narok County, Kenya</li>
+                        <li><i class="fas fa-phone me-2"></i>+254713525190</li>
+                        <li><i class="fab fa-whatsapp me-2"></i>+254713525190</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@olkejumaratours.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2024 Olkeju Mara Tours. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="bookWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const destinationItems = document.querySelectorAll('.destination-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter destinations with animation
+                    destinationItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeInUp 0.5s ease-in-out';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        function bookDestination(destination, price) {
+            const message = `Hi! I'm interested in booking a safari to ${destination}. The price shown is ${price}. Could you please provide more details and help me with the booking?`;
+            const whatsappUrl = `https://wa.me/254713525190?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.hero-slide');
+            let currentSlideIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+            currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlideIndex);
+            });
+        }
+
+        function currentSlide(index) {
+            const slides = document.querySelectorAll('.hero-slide');
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index - 1);
+            });
+        }
+
+        function bookWhatsApp() {
+            const message = `Hi! I have some questions about Olkeju Mara Tours. Could you please assist me?`;
+            const whatsappUrl = `https://wa.me/254713525190?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

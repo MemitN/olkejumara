@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Gallery - Olkeju Mara Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="top-contact-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +254 700 123 456</span>
+                <span><i class="fas fa-envelope"></i> info@olkejumaratours.com</span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced navigation with improved hamburger menu -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-paw me-2"></i>Olkeju Mara Tours
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="packagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Safari Packages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#day-trips">Day Trips</a></li>
+                            <li><a class="dropdown-item" href="index.html#multi-day">Multi-Day Safaris</a></li>
+                            <li><a class="dropdown-item" href="index.html#luxury">Luxury Packages</a></li>
+                            <li><a class="dropdown-item" href="index.html#budget">Budget Safaris</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.php">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/barinko.jfif')"></div>
+   
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="display-4 fw-bold mb-4">Safari Gallery</h1>
+            <p class="lead mb-4">Witness the breathtaking beauty of Maasai Mara through our lens</p>
+            <div class="hero-buttons">
+                <a href="#galleryContainer" class="btn btn-primary">
+                    <i class="fas fa-images me-2"></i>View Gallery
+                </a>
+                <a href="booking.php" class="btn btn-warning">
+                    <i class="fas fa-camera me-2"></i>Book Photo Safari
+                </a>
+            </div>
+        </div>
+        
+        <!-- Hero Navigation -->
+        <div class="hero-navigation">
+            <button class="hero-nav-btn" onclick="previousSlide()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn" onclick="nextSlide()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Hero Indicators -->
+        <div class="hero-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <ul class="nav nav-pills justify-content-center gallery-tabs" id="galleryTabs">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-filter="all">All Photos</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-filter="wildlife">Wildlife</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-filter="landscapes">Landscapes</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-filter="culture">Maasai Culture</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-filter="safari">Safari Experience</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Gallery Grid -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4" id="galleryContainer">
+            <!-- Wildlife Photos -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="wildlife">
+                <div class="gallery-card">
+                    <img src="images/lions.jfif" alt="African Lion" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>King of the Jungle</h5>
+                        <p>Majestic African Lion in his natural habitat</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="wildlife">
+                <div class="gallery-card">
+                    <img src="images/elephants.jfif" alt="Elephants" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Gentle Giants</h5>
+                        <p>Elephant family crossing the Mara River</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="wildlife">
+                <div class="gallery-card">
+                    <img src="images/Cheetah.webp" alt="Cheetah" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Speed Demon</h5>
+                        <p>Cheetah in full sprint across the savanna</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="wildlife">
+                <div class="gallery-card">
+                    <img src="images/migration.jfif" alt="Wildebeest Migration" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>The Great Migration</h5>
+                        <p>Thousands of wildebeest during migration</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="wildlife">
+                <div class="gallery-card">
+                    <img src="images/elusive.jfif" alt="Leopard" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Elusive Leopard</h5>
+                        <p>Leopard resting in an acacia tree</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="wildlife">
+                <div class="gallery-card">
+                    <img src="images/rhino.jfif" alt="Rhino" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Endangered Rhino</h5>
+                        <p>Black rhino grazing peacefully</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landscape Photos -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="landscapes">
+                <div class="gallery-card">
+                    <img src="images/magical sunset.jfif" alt="Mara Sunset" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Golden Hour</h5>
+                        <p>Spectacular sunset over the Mara plains</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="landscapes">
+                <div class="gallery-card">
+                    <img src="images/ms.jfif" alt="Mara River" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Mara River</h5>
+                        <p>The lifeline of the Maasai Mara ecosystem</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="landscapes">
+                <div class="gallery-card">
+                    <img src="images/barinko.jfif" alt="Endless Plains" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Endless Plains</h5>
+                        <p>The vast expanse of the Mara savanna</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cultural Photos -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="culture">
+                <div class="gallery-card">
+                    <img src="images/masaivillage.jfif" alt="Maasai Warriors" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Maasai Warriors</h5>
+                        <p>Traditional Maasai warriors in ceremonial dress</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="culture">
+                <div class="gallery-card">
+                    <img src="images/culture.jfif" alt="Maasai Village" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Traditional Village</h5>
+                        <p>Authentic Maasai bomas (traditional homes)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="culture">
+                <div class="gallery-card">
+                    <img src="images/families.jfif" alt="Traditional Dance" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Cultural Dance</h5>
+                        <p>Traditional Maasai jumping dance ceremony</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safari Experience Photos -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="safari">
+                <div class="gallery-card">
+                    <img src="images/daysafari.webp" alt="Game Drive" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Game Drive Adventure</h5>
+                        <p>Exploring the Mara in our safari vehicles</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="safari">
+                <div class="gallery-card">
+                    <img src="images/ballon.jfif" alt="Balloon Safari" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Balloon Safari</h5>
+                        <p>Bird's eye view of the Mara from above</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="safari">
+                <div class="gallery-card">
+                    <img src="images/luxury.jfif" alt="Safari Camp" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Luxury Safari Camp</h5>
+                        <p>Comfortable accommodation in the wild</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="safari">
+                <div class="gallery-card">
+                    <img src="images/family.jfif" alt="Safari Guide" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Expert Guides</h5>
+                        <p>Our knowledgeable local safari guides</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="landscapes">
+                <div class="gallery-card">
+                    <img src="images/3day.jfif" alt="Dramatic Sky" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Dramatic Skies</h5>
+                        <p>Storm clouds gathering over the Mara</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="wildlife">
+                <div class="gallery-card">
+                    <img src="images/buffalo.jpg" alt="Zebras" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Zebra Herd</h5>
+                        <p>Zebras grazing in the morning light</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-warning">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h3 class="mb-4 text-dark">Ready to Create Your Own Safari Memories?</h3>
+                    <p class="lead text-dark mb-4">Join us for an unforgettable adventure in the Maasai Mara</p>
+                    <a href="javascript:void(0)" onclick="bookWhatsApp()" class="btn btn-dark btn-lg me-3">
+                        <i class="fab fa-whatsapp me-2"></i>Book Your Safari
+                    </a>
+                    <a href="contact.php" class="btn btn-outline-dark btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-paw me-2"></i>Olkeju Mara Tours
+                    </h5>
+                    <p>Your gateway to authentic Maasai Mara safari experiences. Locally owned and operated with a passion for wildlife conservation.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.php">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Safari Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Day Safaris</a></li>
+                        <li><a href="#">Multi-Day Packages</a></li>
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Photography Safaris</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Maasai Mara, Narok County, Kenya</li>
+                        <li><i class="fas fa-phone me-2"></i>+254 700 123 456</li>
+                        <li><i class="fab fa-whatsapp me-2"></i>+254 700 123 456</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@olkejumaratours.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Olkeju Mara Tours. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="me-3">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="bookWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Gallery-specific filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.gallery-tabs .nav-link');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    galleryItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeInUp 0.5s ease-out';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Hero slider functionality
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("hero-slide");
+            let indicators = document.getElementsByClassName("indicator");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < indicators.length; i++) {
+                indicators[i].classList.remove("active");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            indicators[slideIndex-1].classList.add("active");
+        }
+
+        function previousSlide() {
+            plusSlides(-1);
+        }
+
+        function nextSlide() {
+            plusSlides(1);
+        }
+    </script>
+</body>
+</html>

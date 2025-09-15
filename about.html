@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Olkeju Mara Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Added top contact bar matching home page -->
+    <div class="top-contact-bar">
+        <div class="top-contact-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +254713525190</span>
+                <span><i class="fas fa-envelope"></i> info@olkejumaratours.com</span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced navigation with improved hamburger menu -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-paw me-2"></i>Olkeju Mara Tours
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="packagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Safari Packages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#day-trips">Day Trips</a></li>
+                            <li><a class="dropdown-item" href="index.html#multi-day">Multi-Day Safaris</a></li>
+                            <li><a class="dropdown-item" href="index.html#luxury">Luxury Packages</a></li>
+                            <li><a class="dropdown-item" href="index.html#budget">Budget Safaris</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.php">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Replaced page header with dynamic hero section matching home page -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/12.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/aaa.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/blog-1.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>About Olkeju Mara Tours</h1>
+            <p>Your trusted local partner for authentic Maasai Mara safari experiences</p>
+            <div class="hero-buttons">
+                <a href="booking.php" class="btn btn-primary">
+                    <i class="fas fa-calendar-alt me-2"></i>Book Your Safari
+                </a>
+                <button onclick="bookWhatsApp()" class="btn btn-warning">
+                    <i class="fab fa-whatsapp me-2"></i>Chat with Our Founder
+                </button>
+            </div>
+        </div>
+        <div class="hero-navigation">
+            <button class="hero-nav-btn" id="prevBtn" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn" id="nextBtn" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="hero-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="section-title text-start">
+                        <h2>Our Story</h2>
+                    </div>
+                    <p class="lead">Born and raised in the heart of Maasai Mara, Olkeju Mara Tours was founded by local Maasai guides who wanted to share the authentic beauty of their homeland with the world.</p>
+                    <p>What started as a small family-run operation in 2009 has grown into one of Kenya's most trusted safari companies. We are proud to be 100% locally owned and operated, with deep roots in the Maasai community and an intimate knowledge of every corner of the Mara ecosystem.</p>
+                    <p>Our team consists of experienced Maasai guides, conservationists, and hospitality professionals who are passionate about wildlife conservation and cultural preservation. Every safari with us supports local communities and conservation efforts.</p>
+                    <div class="mt-4">
+                        <button onclick="bookWhatsApp()" class="btn btn-warning btn-lg">
+                            <i class="fab fa-whatsapp me-2"></i>Chat with Our Founder
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Our Maasai Guides" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section" style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="text-center p-4">
+                        <i class="fas fa-bullseye fa-3x mb-3" style="color: var(--warning-color);"></i>
+                        <h3>Our Mission</h3>
+                        <p class="text-muted">To provide authentic, sustainable safari experiences that showcase the incredible wildlife and rich Maasai culture of our homeland, while supporting conservation and community development.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="text-center p-4">
+                        <i class="fas fa-eye fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h3>Our Vision</h3>
+                        <p class="text-muted">To be the leading locally-owned safari company in Kenya, recognized for our authentic experiences, conservation leadership, and positive impact on Maasai communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Values</h2>
+                <p>The principles that guide our safari operations</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <i class="fas fa-users fa-3x mb-3" style="color: var(--danger-color);"></i>
+                        <h5>Authentic Culture</h5>
+                        <p class="text-muted">Sharing genuine Maasai traditions and customs with respect and pride.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <i class="fas fa-leaf fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h5>Conservation</h5>
+                        <p class="text-muted">Protecting wildlife and ecosystems for future generations through responsible tourism.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <i class="fas fa-handshake fa-3x mb-3" style="color: var(--secondary);"></i>
+                        <h5>Community Support</h5>
+                        <p class="text-muted">Every safari directly benefits local Maasai communities and conservation projects.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <i class="fas fa-star fa-3x mb-3" style="color: var(--warning-color);"></i>
+                        <h5>Excellence</h5>
+                        <p class="text-muted">Delivering exceptional safari experiences with attention to every detail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>Experienced Maasai guides and safari experts</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-4">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Joseph Olkeju" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h5>Joseph Olkeju</h5>
+                        <p style="color: var(--warning-color); font-weight: 600;">Founder & Chief Guide</p>
+                        <p class="text-muted">Born in Maasai Mara, Joseph has over 20 years of guiding experience and intimate knowledge of wildlife behavior and migration patterns.</p>
+                        <div class="social-links">
+                            <a href="#" style="color: var(--warning-color);" class="me-2"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" style="color: var(--warning-color);"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-4">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Mary Sankale" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h5>Mary Sankale</h5>
+                        <p style="color: var(--warning-color); font-weight: 600;">Cultural Experience Coordinator</p>
+                        <p class="text-muted">Mary organizes authentic cultural experiences and works closely with Maasai villages to ensure respectful and meaningful interactions.</p>
+                        <div class="social-links">
+                            <a href="#" style="color: var(--warning-color);" class="me-2"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" style="color: var(--warning-color);"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-4">
+                        <img src="/placeholder.svg?height=200&width=200" alt="David Kimani" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h5>David Kimani</h5>
+                        <p style="color: var(--warning-color); font-weight: 600;">Senior Safari Guide</p>
+                        <p class="text-muted">David specializes in photography safaris and has an exceptional eye for spotting wildlife. He's also a certified Kenya Professional Safari Guide.</p>
+                        <div class="social-links">
+                            <a href="#" style="color: var(--warning-color);" class="me-2"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" style="color: var(--warning-color);"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="section" style="background: linear-gradient(135deg, var(--warning-color), var(--safari-gold)); color: var(--dark-color);">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h2 class="display-4 fw-bold counter" data-target="2500">0</h2>
+                    <p class="lead">Happy Safari Guests</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h2 class="display-4 fw-bold counter" data-target="15">0</h2>
+                    <p class="lead">Years in Maasai Mara</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h2 class="display-4 fw-bold counter" data-target="50">0</h2>
+                    <p class="lead">Safari Vehicles</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h2 class="display-4 fw-bold counter" data-target="99">0</h2>
+                    <p class="lead">% Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conservation Impact -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Conservation Impact</h2>
+                <p>How your safari contributes to wildlife and community conservation</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="impact-card text-center p-4">
+                        <i class="fas fa-seedling fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h5>Tree Planting Program</h5>
+                        <p class="text-muted">We've planted over 5,000 indigenous trees to restore degraded areas and create wildlife corridors.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="impact-card text-center p-4">
+                        <i class="fas fa-graduation-cap fa-3x mb-3" style="color: var(--secondary);"></i>
+                        <h5>Education Support</h5>
+                        <p class="text-muted">Supporting 3 local schools with educational materials and conservation awareness programs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="impact-card text-center p-4">
+                        <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--danger-color);"></i>
+                        <h5>Anti-Poaching Support</h5>
+                        <p class="text-muted">Contributing to ranger patrols and wildlife monitoring programs to protect endangered species.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="background: var(--dark-color); color: white;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2 class="fw-bold mb-4">Ready to Experience Authentic Maasai Mara?</h2>
+                    <p class="lead mb-4">Join us for an unforgettable safari that supports conservation and local communities</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="booking.php" class="btn btn-warning btn-lg">
+                            <i class="fas fa-calendar-alt me-2"></i>Book Your Safari
+                        </a>
+                        <button onclick="bookWhatsApp()" class="btn btn-outline-warning btn-lg">
+                            <i class="fab fa-whatsapp me-2"></i>Chat with Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-paw me-2"></i>Olkeju Mara Tours
+                    </h5>
+                    <p class="text-muted">Your gateway to authentic Maasai Mara safari experiences. Locally owned and operated with a passion for wildlife conservation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.php">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Safari Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Day Safaris</a></li>
+                        <li><a href="#">Multi-Day Packages</a></li>
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Photography Safaris</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Maasai Mara, Narok County, Kenya</li>
+                        <li><i class="fas fa-phone me-2"></i>+254713525190</li>
+                        <li><i class="fab fa-whatsapp me-2"></i>+254713525190</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@olkejumaratours.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2024 Olkeju Mara Tours. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="bookWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
